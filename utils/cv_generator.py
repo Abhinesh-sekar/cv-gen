@@ -174,14 +174,14 @@ def generate_cv_pdf(user_data):
             exp_text = f"{i}. "
             story.append(Paragraph(exp_text, normal_style))
             
-            # Role/Designation
-            if exp.get('position'):
-                story.append(Paragraph(f"    Designation: {capitalize_name(exp['position'])}", normal_style))
-            
             # Company
             if exp.get('company'):
                 story.append(Paragraph(f"    Company: {capitalize_name(exp['company'])}", normal_style))
             
+            # Role/Designation
+            if exp.get('position'):
+                story.append(Paragraph(f"    Designation: {capitalize_name(exp['position'])}", normal_style))           
+          
             # Department
             if exp.get('department'):
                 story.append(Paragraph(f"    Department: {exp['department']}", normal_style))
