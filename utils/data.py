@@ -58,7 +58,7 @@ def collect_user_data():
                 start_date = st.date_input(f"Start Date", key=f"start_{i}")
                 end_date = st.date_input(f"End Date", key=f"end_{i}")
             
-            responsibilities = st.text_area(f"Key Responsibilities", key=f"resp_{i}")
+            #responsibilities = st.text_area(f"Key Responsibilities", key=f"resp_{i}")
             
             if company and position:
                 work_experience.append({
@@ -66,7 +66,6 @@ def collect_user_data():
                     'position': position,
                     'start_date': start_date,
                     'end_date': end_date,
-                    'responsibilities': responsibilities
                 })
     
     # Validation
