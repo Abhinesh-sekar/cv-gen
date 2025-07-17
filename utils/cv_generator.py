@@ -176,16 +176,16 @@ def generate_cv_pdf(user_data):
             
             # Role/Designation
             if exp.get('position'):
-                story.append(Paragraph(f"    Role/Designation: {capitalize_name(exp['position'])}", normal_style))
-            
-            # Department
-            if exp.get('department'):
-                story.append(Paragraph(f"    Department: {exp['department']}", normal_style))
+                story.append(Paragraph(f"    Designation: {capitalize_name(exp['position'])}", normal_style))
             
             # Company
             if exp.get('company'):
                 story.append(Paragraph(f"    Company: {capitalize_name(exp['company'])}", normal_style))
             
+            # Department
+            if exp.get('department'):
+                story.append(Paragraph(f"    Department: {exp['department']}", normal_style))
+                        
             # Start Year
             if exp.get('start_date'):
                 start_year = exp['start_date'].year if hasattr(exp['start_date'], 'year') else exp['start_date']
