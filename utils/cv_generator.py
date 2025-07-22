@@ -67,8 +67,8 @@ def generate_cv_pdf(user_data):
         spaceAfter=8,
         spaceBefore=15,
         fontName='Helvetica-Bold',
-        textColor=colors.white,
-        backColor=colors.darkblue,
+        textColor=colors.black,
+        backColor=colors.darkgray,
         borderPadding=5,
         alignment=TA_LEFT
     )
