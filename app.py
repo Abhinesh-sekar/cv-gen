@@ -123,7 +123,7 @@ def main():
             
             with st.spinner("Securing PDF..."):
                 dob = st.session_state.user_data['dob']
-                password = dob.strftime("%d%m%Y")
+                password = "gbl"
                 encrypted_pdf_path = encrypt_pdf(pdf_path, password)
             
             name = st.session_state.user_data['name'].replace(" ", "-")
@@ -151,7 +151,7 @@ def main():
                 else:
                     st.error("❌ Upload to Dropbox failed.")
             
-            st.info(f"🔐 PDF Password: `{password}` (your DOB in DDMMYYYY format)")
+            st.info(f"🔐 PDF Password: `{password}`:")
             
             try:
                 os.remove(pdf_path)
