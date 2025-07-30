@@ -93,6 +93,11 @@ def generate_cv_pdf(user_data):
     # Name
     story.append(Paragraph(f"<b>{capitalize_name(user_data['name'])}</b>", name_style))
 
+    # Phone Number
+    if user_data.get('phone'):
+        story.append(Paragraph(f"Phone Number: {user_data['phone']}", normal_style))
+
+
     # Personal Information (following the first CV format)
     # Father's Name or Husband's Name based on marital status
     if user_data.get('is_married') == "Single" and user_data.get('father_name'):
@@ -111,9 +116,6 @@ def generate_cv_pdf(user_data):
     if user_data.get('address'):
         story.append(Paragraph(f"Address: {user_data['address']}", normal_style))
 
-    # Phone Number
-    if user_data.get('phone'):
-        story.append(Paragraph(f"Phone Number: {user_data['phone']}", normal_style))
 
     story.append(Spacer(1, 15))
 
